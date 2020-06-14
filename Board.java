@@ -87,11 +87,11 @@ public class Board {
     public String getWinner() {
 //      This method gets the winner of the game. If the game is not yet over there is no winner so returns null.
 
-        if (!isTerminal()) {
-            return null;
+        if (isTerminal()) {
+            return getTurn();
         }
 
-        return getTurn();
+        return null;
     }
 
     public static boolean isInList(ArrayList<int[]> arrayList, int[] array) {
